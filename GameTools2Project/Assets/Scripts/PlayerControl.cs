@@ -6,6 +6,7 @@ public class PlayerControl : MonoBehaviour {
 
     private float m_dodgeX;
     private float m_walkY;
+    private bool m_magic;
 
     private Player m_player;
 
@@ -18,8 +19,9 @@ public class PlayerControl : MonoBehaviour {
         //Get Inputs
         m_dodgeX = Input.GetAxis("Horizontal");
         m_walkY = Input.GetAxis("Vertical");
+        m_magic = Input.GetButtonDown("Jump");
 
-        m_player.Move(m_dodgeX, m_walkY);
+        m_player.Move(m_dodgeX, m_walkY, m_magic);
     }
 }
 
