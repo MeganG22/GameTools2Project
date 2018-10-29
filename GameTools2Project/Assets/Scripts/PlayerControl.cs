@@ -8,7 +8,9 @@ public class PlayerControl : MonoBehaviour {
 
     private float m_dodgeX;
     private float m_walkY;
+    private float m_back;
     private bool m_magic;
+    private bool m_collect;
 
     private Player m_player;
 
@@ -23,8 +25,10 @@ public class PlayerControl : MonoBehaviour {
         m_dodgeX = Input.GetAxis("Horizontal");
         m_walkY = Input.GetAxis("Vertical");
         m_magic = Input.GetButtonDown("Jump");
+        m_back = Input.GetAxis("Vertical");
+        m_collect = Input.GetButtonDown("Collect");
 
-        m_player.Move(m_dodgeX, m_walkY, m_magic);
+        m_player.Move(m_dodgeX, m_walkY, m_back, m_magic);
     }
 
     private void OnTriggerStay(Collider other)
@@ -34,7 +38,7 @@ public class PlayerControl : MonoBehaviour {
         //Debug.Log("PickingTrigger");
         //Debug.Log(m_picked);
 
-        if (m_magic && pickable != null && !pickable.picked) //if key selected & object has pickable script & not picked already
+        if (m_collect && pickable != null && !pickable.picked) //if key selected & object has pickable script & not picked already
         {
             Transform rightHand = m_animator.GetBoneTransform(HumanBodyBones.RightHand);
             pickable.BePicked(rightHand);

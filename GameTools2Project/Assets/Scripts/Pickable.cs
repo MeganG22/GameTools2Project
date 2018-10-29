@@ -15,11 +15,11 @@ public class Pickable : MonoBehaviour {
 
     IEnumerator HandlePick(Transform newParent)
     {
-        yield return new WaitForSeconds(0.5f); //finish for now & come back (wait few seconds before 'pick' & re-parent)
+        yield return new WaitForSeconds(0.1f); //finish for now & come back (wait few seconds before 'pick' & re-parent)
         transform.parent = newParent;
         transform.localPosition = Vector3.zero;
 
-        yield return new WaitForSeconds(4.0f);
+        yield return new WaitForSeconds(0.2f);
         Destroy(gameObject);
     }
 
