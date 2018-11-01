@@ -7,7 +7,8 @@ public class MagicHolder : MonoBehaviour {
     [SerializeField] GameObject m_magicOrb;
     [SerializeField] Transform m_magicReference;
     [SerializeField] Player m_player;
-
+    private float _timer;
+    [SerializeField] private float _waitTime;
 
     private void OnEnable()
     {
@@ -21,7 +22,14 @@ public class MagicHolder : MonoBehaviour {
 
     private void Magic()
     {
+        _timer += Time.deltaTime;
+
+        if (Input.GetButtonDown("Jump") && _timer > _waitTime)
+        {
+            //If magic aninmation is triggered and waitTime achieved instansiate the orb
             Instantiate(m_magicOrb, m_magicReference.position, m_magicReference.rotation);
-    
+            _timer = 0f;
+
+        }
     }
 }

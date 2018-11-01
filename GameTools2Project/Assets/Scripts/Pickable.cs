@@ -9,14 +9,15 @@ public class Pickable : MonoBehaviour {
 
     public void BePicked(Transform newParent)
     {
+        //Parenting the Pillar to the Player
         picked = true;
         StartCoroutine(HandlePick(newParent));
     }
 
     IEnumerator HandlePick(Transform newParent)
     {
-        yield return new WaitForSeconds(0.1f); //finish for now & come back (wait few seconds before 'pick' & re-parent)
-        transform.parent = newParent;
+        //Picking the Pillars at set times
+        yield return new WaitForSeconds(0.1f);
         transform.localPosition = Vector3.zero;
 
         yield return new WaitForSeconds(0.2f);

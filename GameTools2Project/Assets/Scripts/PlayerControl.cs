@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour {
 
-    private Animator m_animator;
+    public Animator m_animator;
 
     private float m_dodgeX;
     private float m_walkY;
@@ -19,9 +19,9 @@ public class PlayerControl : MonoBehaviour {
         m_player = GetComponent<Player>();
         m_animator = GetComponent<Animator>();
     }
-    void FixedUpdate() //physics seconds
+    void FixedUpdate()
     {
-        //Get Inputs
+        //Getting the Inputs
         m_dodgeX = Input.GetAxis("Horizontal");
         m_walkY = Input.GetAxis("Vertical");
         m_magic = Input.GetButtonDown("Jump");
@@ -35,16 +35,13 @@ public class PlayerControl : MonoBehaviour {
     {
         var pickable = other.GetComponent<Pickable>();
 
-        //Debug.Log("PickingTrigger");
-        //Debug.Log(m_picked);
-
-        if (m_collect && pickable != null && !pickable.picked) //if key selected & object has pickable script & not picked already
+        //if key selected & object has pickable script & not picked already
+        if (m_collect && pickable != null && !pickable.picked)
         {
             Transform rightHand = m_animator.GetBoneTransform(HumanBodyBones.RightHand);
             pickable.BePicked(rightHand);
 
             m_animator.SetTrigger("Magic");
-            //StartCoroutine(UpdateIK(other));
         }
     }
 }

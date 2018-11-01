@@ -13,6 +13,7 @@ public class levelEnd : MonoBehaviour {
     {
         if (other.CompareTag(Tag))
         {
+            //if player hits endLight the current scene loads again
             EndGame.Invoke();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }

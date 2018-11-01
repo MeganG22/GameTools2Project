@@ -168,7 +168,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Casting Spell
       takeName: Take 001
-      firstFrame: 0
+      firstFrame: 10
       lastFrame: 59
       wrapMode: 0
       orientationOffsetY: 0

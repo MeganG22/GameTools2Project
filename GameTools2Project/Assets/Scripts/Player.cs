@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
-
     private Animator m_animator;
     private float m_dodgeX;
     private float m_walkY;
@@ -35,6 +34,7 @@ public class Player : MonoBehaviour
         //m_animator.SetBool("Magic", magic);
         if (magic)
         {
+            //Setting the shooting orb event
             m_animator.SetTrigger("Magic");
 
             if (OnShoot != null)
@@ -54,24 +54,26 @@ public class Player : MonoBehaviour
         if (timer <= 0)
         {
             UpdatePosition();
-            timer = 0.5f;
+            timer = 0f;
         }
     }
 
     void UpdatePosition()
     {
+        //Giving the player a wayPoint gameObject for the darkEnergy to follow
         wayPoint.transform.position = transform.position;
     }
 
     void OnCollisionEnter(Collision c)
     {
-        // force is how forcefully we will push the player away from the enemy.
+        //The strength of the enemie's push
         float force = 400;
 
-        // If the object we hit is the enemy
+        //If the object the player hits is the enemy
         if (c.gameObject.tag == "enemy")
             Debug.Log("hitting");
         {
+            //Add the push
             Vector3 dir = c.contacts[0].point - transform.position;
             dir = -dir.normalized;
             GetComponent<Rigidbody>().AddForce(dir * force);

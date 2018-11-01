@@ -10,6 +10,7 @@ public class levelLoader : MonoBehaviour {
 
     public void LoadLevel()
     {
+        //loads a specific scene
         SceneManager.LoadScene(LevelToLoad);
     }
 }
