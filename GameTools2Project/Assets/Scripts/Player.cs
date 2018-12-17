@@ -86,22 +86,22 @@ public class Player : MonoBehaviour
         wayPoint.transform.position = transform.position;
     }
 
-    void OnCollisionEnter(Collision c)
-    {
+    //void OnCollisionEnter(Collision c)
+    //{
         //The strength of the enemie's push
-        float force = 400;
+        //float force = 100;
 
         //If the object the player hits is the enemy
-        if (c.gameObject.tag == "enemy")
-            Debug.Log("hitting");
-        {
+        //if (c.gameObject.tag == "enemy")
+            //Debug.Log("hitting");
+        //{
             //Add the push
-            Vector3 dir = c.contacts[0].point - transform.position;
-            dir = -dir.normalized;
-            GetComponent<Rigidbody>().AddForce(dir * force);
-            Debug.Log("Force");
-        }
-    }
+           // Vector3 dir = c.contacts[0].point - transform.position;
+            //dir = -dir.normalized;
+            //GetComponent<Rigidbody>().AddForce(dir * force);
+            //Debug.Log("Force");
+        //}
+    //}
 }
 
 

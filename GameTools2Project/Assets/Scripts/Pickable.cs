@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Pickable : MonoBehaviour {
 
+    public Text ScoreText;
+    public int KeysToAdd;
+    private int _score;
 
     public bool picked;
 
@@ -12,6 +16,8 @@ public class Pickable : MonoBehaviour {
         //Parenting the Pillar to the Player
         picked = true;
         StartCoroutine(HandlePick(newParent));
+        _score += KeysToAdd;
+        ScoreText.text = "Keys: " + _score + "/7";
     }
 
     IEnumerator HandlePick(Transform newParent)
