@@ -12,6 +12,9 @@ public class Player : MonoBehaviour
 
     public GameObject wayPoint;
     private float timer = 0.5f;
+
+    float interval = 0.5f;
+    float lastSpell = 0;
     //public GameObject c;
 
     public UnityEvent OnShoot;
@@ -34,7 +37,7 @@ public class Player : MonoBehaviour
         //m_animator.SetBool("Magic", magic);
         if (magic)
         {
-            //Setting the shooting orb event
+            lastSpell = Time.time;
             m_animator.SetTrigger("Magic");
 
             if (OnShoot != null)
@@ -56,7 +59,26 @@ public class Player : MonoBehaviour
             UpdatePosition();
             timer = 0f;
         }
+
+        //check input if true and Time.time-lastSpell > interval then cast spell
+        if (Input.GetButtonDown("Jump") && Time.time - lastSpell > interval)
+        {
+            //Setting the shooting orb event
+            m_animator.SetTrigger("Magic");
+
+            if (OnShoot != null)
+            {
+                OnShoot.Invoke();
+            }
+        }
+
     }
+
+    void Spell()
+    {
+        lastSpell = Time.time;
+    }
+
 
     void UpdatePosition()
     {

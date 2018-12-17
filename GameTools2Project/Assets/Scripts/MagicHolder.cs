@@ -7,6 +7,7 @@ public class MagicHolder : MonoBehaviour {
     [SerializeField] GameObject m_magicOrb;
     [SerializeField] Transform m_magicReference;
     [SerializeField] Player m_player;
+
     private float _timer;
     [SerializeField] private float _waitTime;
 
