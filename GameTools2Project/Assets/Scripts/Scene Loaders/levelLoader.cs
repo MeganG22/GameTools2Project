@@ -8,7 +8,7 @@ public class levelLoader : MonoBehaviour {
 
     public int LevelToLoad;
 
-    public void LoadLevel()
+    public void LoadLevel()   //This script references the Level Ends etc.
     {
         //loads a specific scene
         SceneManager.LoadScene(LevelToLoad);

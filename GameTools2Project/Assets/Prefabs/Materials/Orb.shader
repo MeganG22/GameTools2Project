@@ -1,58 +1,30 @@
 ﻿Shader "Costumized/Orb"
 {
-	Properties
-	{
-		_Color("Main Color", Color) = (0,1,0,0.5)
-		_Scale("Scale", Range(0,1)) = 0
+	Properties{
+	_Color("Color", Color) = (1.0, 1.0, 1.0, 1.0)   //Color of Orb (can be choosen in Unity)
 	}
+		SubShader{
+		//Making whatever color the Orb will have to be Transparent
+		  Tags { "RenderType" = "Transparent" "Queue" = "Transparent" }
+		  Blend SrcAlpha OneMinusSrcAlpha
+		  Cull Off
+		  LOD 200
 
-		SubShader
-	{
+		  CGPROGRAM
+		  #pragma surface surf Lambert
 
-		Pass
-		{
+		  fixed4 _Color;  //Setting the color
 
-			CGPROGRAM
+	struct Input {
+	  float2 uv_MainTex;
+	};
 
-			#pragma vertex vertexFunction
-			#pragma fragment fragmentFunction
-
-			#include "UnityCG.cginc"
-
-			struct appdata
-			{
-				float4 pos : POSITION;
-				float3 normal : NORMAL;
-			};
-
-			struct v2f
-			{
-				float4 pos : SV_POSITION;
-				float3 normal : NORMAL;
-			};
-
-			fixed4 _Color;
-			float _Scale;
-
-			v2f vertexFunction(appdata v)
-			{
-				v2f o;
-
-				o.pos = v.pos + float4(_Scale * abs(sin(_Time.z)) * v.normal, 1);
-				o.pos = UnityObjectToClipPos(o.pos);
-
-				o.normal = UnityObjectToWorldNormal(v.normal);
-
-
-				return o;
-			}
-
-			fixed4 fragmentFunction(v2f outputVertex) : SV_Target
-			{
-				return fixed4(outputVertex.normal,1);
-			}
-
-			ENDCG
-		}
+	void surf(Input IN, inout SurfaceOutput o) {   //How color is choosen in Unity
+	  o.Albedo = _Color.rgb;
+	  o.Emission = _Color.rgb;
+	  o.Alpha = _Color.a;
 	}
+	ENDCG
+	}
+		FallBack "Diffuse"
 }

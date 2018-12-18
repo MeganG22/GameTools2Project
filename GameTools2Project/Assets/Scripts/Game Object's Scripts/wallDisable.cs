@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class wallDisable : MonoBehaviour {
 
-    //public GameObject WallToDestroy;
-    //public GameObject TheObject;
-    //public GameObject Player;
-
     void OnCollisionEnter(Collision collision)
     {
+        //When player collides with a wall, they are disabled
         Debug.Log("Colliding");
         if (collision.gameObject.tag == "wall")
         {
@@ -19,6 +16,7 @@ public class wallDisable : MonoBehaviour {
 
     void OnCollisionExit(Collision collision)
     {
+        //When player leaves collision with a wall, they are set active again
         Debug.Log("Exiting");
         if (collision.gameObject.tag == "wall")
         {

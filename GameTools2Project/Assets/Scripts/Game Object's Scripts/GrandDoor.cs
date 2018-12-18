@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GrandDoor : MonoBehaviour {
 
+    //Grand Door's Animator
     private Animator m_animator;
 
     void Start()
@@ -14,6 +15,7 @@ public class GrandDoor : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision)
     {
+        //If player enters Door's collider; door open animation plays
         Debug.Log("Door Hit");
         if (collision.gameObject.tag == "Player")
         {

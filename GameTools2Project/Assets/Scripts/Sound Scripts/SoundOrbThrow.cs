@@ -2,28 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundKeyCollect : MonoBehaviour {
+public class SoundOrbThrow : MonoBehaviour {
 
+    //Orb Throw Sound Sources
     [SerializeField] AudioClip m_audioClip;
     private AudioSource m_audioSource;
 
     private void Start()
     {
+        //Initialising the Audio Source
         m_audioSource = GetComponent<AudioSource>();
     }
 
-    private void MakeSound()
+    private void MakeSoundTwo()
     {
+        //Animation Event to Perform PlaySound Function
         PlaySound();
     }
 
     private void PlaySound()
     {
-
-        //if (m_audioSource != null)
-        //{
-            Debug.Log("Sound");
-            m_audioSource.PlayOneShot(m_audioClip);
-        //}
+        //Play the Orb Throw Sound
+        Debug.Log("Sound");
+        m_audioSource.PlayOneShot(m_audioClip);
     }
 }
