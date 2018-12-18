@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_power: 100000
-  _lifetime: 1.18
+  _lifetime: 1.9
 --- !u!135 &135620117157447552
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -18,6 +18,9 @@ public class DarkEnergy : MonoBehaviour {
     [SerializeField] Transform[] m_WayPoints;
     [SerializeField] GameObject m_Player;
 
+    [SerializeField] AudioClip m_audioClip;
+    private AudioSource m_audioSource;
+
     void Start()
     {
         m_NPCState = NPCState.WALK;
@@ -26,6 +29,8 @@ public class DarkEnergy : MonoBehaviour {
 
         m_NavMeshAgent.updatePosition = true;
         m_NavMeshAgent.updateRotation = true;
+
+        m_audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -116,6 +121,7 @@ public class DarkEnergy : MonoBehaviour {
         if (other.tag == "Player")
         {
             m_IsPlayerInView = true;
+            PlaySound();
 
         }
     }
@@ -143,5 +149,11 @@ public class DarkEnergy : MonoBehaviour {
         Gizmos.color = Color.green;
         Gizmos.DrawRay(transform.position, rightDirection * 4);
         Gizmos.DrawRay(transform.position, leftDirection * 4);
+    }
+
+    private void PlaySound()
+    {
+        Debug.Log("Sound");
+        m_audioSource.PlayOneShot(m_audioClip);
     }
 }

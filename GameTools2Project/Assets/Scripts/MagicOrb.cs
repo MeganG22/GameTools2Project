@@ -24,7 +24,7 @@ public class MagicOrb : MonoBehaviour
         m_rigidbody.AddForce(transform.forward * m_power * Time.deltaTime);
 
     }
-    
+
     void OnCollisionEnter(Collision collision)
     {
         //If orb hits the Portal it destroys
