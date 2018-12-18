@@ -5,16 +5,24 @@ using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
+    //IK Enumerator
+    private float deltaX;
+    private Quaternion spineRotation;
+    private bool m_enableIK;
+    private float m_weightIK;
+    private Vector3 m_positionIK;
+    private bool m_picked;
+
+    //Animator
     private Animator m_animator;
     private float m_dodgeX;
     private float m_walkY;
     private float m_back;
 
-    public GameObject wayPoint;
     private float timer = 0.5f;
-
-    float interval = 0.5f;
+    float interval = 1.90f;
     float lastSpell = 0;
+
     //public GameObject c;
 
     public UnityEvent OnShoot;
@@ -26,15 +34,13 @@ public class Player : MonoBehaviour
     {
         //Initialise Animator
         m_animator = GetComponent<Animator>();
-
     }
 
     public void Move(float dodgeX, float walkY, float back, bool magic)
     {
         m_animator.SetFloat("DodgeX", dodgeX);
         m_animator.SetFloat("WalkY", walkY);
-        //m_animator.SetFloat("Back Jump", back);
-        //m_animator.SetBool("Magic", magic);
+
         if (magic)
         {
             lastSpell = Time.time;
@@ -56,7 +62,6 @@ public class Player : MonoBehaviour
         }
         if (timer <= 0)
         {
-            UpdatePosition();
             timer = 0f;
         }
 
@@ -71,7 +76,6 @@ public class Player : MonoBehaviour
                 OnShoot.Invoke();
             }
         }
-
     }
 
     void Spell()
@@ -79,29 +83,49 @@ public class Player : MonoBehaviour
         lastSpell = Time.time;
     }
 
-
-    void UpdatePosition()
+    private void OnTriggerStay(Collider other)
     {
-        //Giving the player a wayPoint gameObject for the darkEnergy to follow
-        wayPoint.transform.position = transform.position;
+        if (gameObject.tag == "key")
+        {
+            var pickable = other.GetComponent<Pickable>();
+
+            if (m_picked && pickable != null && !pickable.picked)
+            {
+                // do something
+                Transform rightHand = m_animator.GetBoneTransform(HumanBodyBones.RightHand);
+                pickable.BePicked(rightHand);
+
+                m_animator.SetTrigger("Magic");
+                StartCoroutine(UpdateIK(other));// Start corroutine to update position and weight
+            }
+        }
     }
 
-    //void OnCollisionEnter(Collision c)
-    //{
-        //The strength of the enemie's push
-        //float force = 100;
+    private IEnumerator UpdateIK(Collider other)
+    {
+        m_enableIK = true;
 
-        //If the object the player hits is the enemy
-        //if (c.gameObject.tag == "enemy")
-            //Debug.Log("hitting");
-        //{
-            //Add the push
-           // Vector3 dir = c.contacts[0].point - transform.position;
-            //dir = -dir.normalized;
-            //GetComponent<Rigidbody>().AddForce(dir * force);
-            //Debug.Log("Force");
-        //}
-    //}
+        while (m_enableIK)
+        {
+            m_positionIK = other.transform.position;
+            m_weightIK = m_animator.GetFloat("IK");
+            yield return null;
+        }
+    }
+
+    public void DisableIK()
+    {
+        m_enableIK = false;
+    }
+
+    private void OnAnimatorIK(int layerIndex)
+    {
+        if (m_enableIK)
+        {
+            m_animator.SetIKPosition(AvatarIKGoal.RightHand, m_positionIK);
+            m_animator.SetIKPositionWeight(AvatarIKGoal.RightHand, m_weightIK);
+        }
+    }
 }
 
 

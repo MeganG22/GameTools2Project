@@ -5147,7 +5147,7 @@ GameObject:
   - component: {fileID: 41823818}
   m_Layer: 0
   m_Name: Wall3
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 40
@@ -5175,8 +5175,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 16.749737, y: 1, z: 1}
+  m_Center: {x: -2.1806853, y: 0, z: 1.4156652e-16}
 --- !u!23 &41823819
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5494,7 +5494,7 @@ GameObject:
   - component: {fileID: 58751434}
   m_Layer: 0
   m_Name: Wall2
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 40
@@ -5522,8 +5522,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 14.364804, y: 1, z: 1}
+  m_Center: {x: -2.8161082, y: 0, z: -1.3879164e-16}
 --- !u!23 &58751435
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5783,7 +5783,7 @@ GameObject:
   - component: {fileID: 76177043}
   m_Layer: 0
   m_Name: Wall1
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 40
@@ -5811,8 +5811,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 15.110146, y: 1, z: 0.99999857}
+  m_Center: {x: -2.5567791, y: 0, z: -2.0960074e-16}
 --- !u!23 &76177044
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6806,7 +6806,7 @@ GameObject:
   - component: {fileID: 149356086}
   m_Layer: 0
   m_Name: Wall3
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 40
@@ -6834,8 +6834,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 16.604425, y: 1, z: 1}
+  m_Center: {x: -2.676102, y: 0, z: -1.7701951e-16}
 --- !u!23 &149356087
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8253,7 +8253,7 @@ GameObject:
   - component: {fileID: 268443682}
   m_Layer: 0
   m_Name: Wall2
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 40
@@ -8281,8 +8281,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 20.137323, y: 1.0081458, z: 1.0000002}
+  m_Center: {x: -2.17708, y: 0.004071808, z: 1.4058206e-16}
 --- !u!23 &268443683
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8425,7 +8425,7 @@ GameObject:
   - component: {fileID: 273277420}
   m_Layer: 0
   m_Name: Wall3
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 40
@@ -8453,8 +8453,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 15.770042, y: 1, z: 1}
+  m_Center: {x: -1.1440178, y: 0, z: 8.543894e-17}
 --- !u!23 &273277421
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8597,7 +8597,7 @@ GameObject:
   - component: {fileID: 277320724}
   m_Layer: 0
   m_Name: Wall2
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 40
@@ -8625,8 +8625,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 15.913085, y: 1, z: 1}
+  m_Center: {x: -3.0966938, y: 0, z: -6.217942e-17}
 --- !u!23 &277320725
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9244,7 +9244,7 @@ GameObject:
   - component: {fileID: 341781494}
   m_Layer: 0
   m_Name: EntranceWall
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 40
@@ -11219,7 +11219,7 @@ GameObject:
   - component: {fileID: 460369546}
   m_Layer: 0
   m_Name: Wall1
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 40
@@ -11247,8 +11247,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 15.446061, y: 1, z: 0.99999857}
+  m_Center: {x: -4.744767, y: 0, z: 3.8781605e-16}
 --- !u!23 &460369547
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13307,7 +13307,7 @@ GameObject:
   - component: {fileID: 653156652}
   m_Layer: 0
   m_Name: Wall1
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 40
@@ -13335,8 +13335,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 11.076621, y: 1, z: 0.99999857}
+  m_Center: {x: -2.281453, y: 0, z: 1.6907995e-16}
 --- !u!23 &653156653
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20061,7 +20061,7 @@ GameObject:
   - component: {fileID: 845287500}
   m_Layer: 0
   m_Name: Wall3
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 40
@@ -20089,8 +20089,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 19.284973, y: 2.5503733, z: 1}
+  m_Center: {x: -2.3456361, y: -0.7751892, z: 1.8660538e-16}
 --- !u!23 &845287501
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26861,7 +26861,7 @@ GameObject:
   - component: {fileID: 958163139}
   m_Layer: 0
   m_Name: Wall3
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 40
@@ -26889,8 +26889,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 14.608419, y: 1, z: 1}
+  m_Center: {x: -1.836892, y: 0, z: 4.769579e-17}
 --- !u!23 &958163140
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27031,7 +27031,7 @@ GameObject:
   - component: {fileID: 964500427}
   m_Layer: 0
   m_Name: Wall1
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 40
@@ -27059,8 +27059,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 18.491203, y: 1, z: 0.99999857}
+  m_Center: {x: -5.8649535, y: 0, z: -2.140376e-16}
 --- !u!23 &964500428
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -41453,7 +41453,7 @@ GameObject:
   - component: {fileID: 1241667412}
   m_Layer: 0
   m_Name: Wall2
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 40
@@ -41481,8 +41481,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 17.281546, y: 1, z: 1}
+  m_Center: {x: -4.239692, y: 0, z: 2.4990945e-16}
 --- !u!23 &1241667413
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -41625,7 +41625,7 @@ GameObject:
   - component: {fileID: 1260369938}
   m_Layer: 0
   m_Name: Wall1
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 40
@@ -41653,8 +41653,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 15.532436, y: 1, z: 0.99999857}
+  m_Center: {x: -2.2109575, y: 0, z: 1.498316e-16}
 --- !u!23 &1260369939
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -46968,7 +46968,7 @@ GameObject:
   - component: {fileID: 1325949496}
   m_Layer: 0
   m_Name: Wall3
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 40
@@ -46996,8 +46996,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 18.672306, y: 1, z: 1}
+  m_Center: {x: -5.3041344, y: 0, z: -3.671641e-16}
 --- !u!23 &1325949497
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -47654,7 +47654,7 @@ GameObject:
   - component: {fileID: 1382419919}
   m_Layer: 0
   m_Name: Wall3
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 40
@@ -47682,8 +47682,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 13.886268, y: 1, z: 1}
+  m_Center: {x: -2.2779946, y: 0, z: 1.6813625e-16}
 --- !u!23 &1382419920
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -49072,7 +49072,7 @@ GameObject:
   - component: {fileID: 1506542108}
   m_Layer: 0
   m_Name: Wall1
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 40
@@ -49100,8 +49100,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 20.083778, y: 1, z: 0.99999857}
+  m_Center: {x: -2.0683842, y: 0, z: 1.1090282e-16}
 --- !u!23 &1506542109
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -55379,7 +55379,7 @@ GameObject:
   - component: {fileID: 1643905145}
   m_Layer: 0
   m_Name: Wall2
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 40
@@ -55407,8 +55407,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 16.691149, y: 1, z: 1}
+  m_Center: {x: -2.9903855, y: 0, z: -9.1206284e-17}
 --- !u!23 &1643905146
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -56036,7 +56036,6 @@ MonoBehaviour:
   m_magicOrb: {fileID: 1189499398481654, guid: 1c2bd074b0732704ba8a15aa8b7fd421, type: 2}
   m_magicReference: {fileID: 1130573316}
   m_player: {fileID: 1698581621}
-  _waitTime: 0
 --- !u!1 &1683698547
 GameObject:
   m_ObjectHideFlags: 0
@@ -56492,10 +56491,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dbc247788b4a9a4da0a5412dbfde186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wayPoint: {fileID: 1950229046}
   OnShoot:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7400000, guid: 8d33d352a2ce76a4faee7bcd548b6e9b, type: 3}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!136 &1698581622
@@ -56531,6 +56540,17 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 9500000, guid: c828b03ae61ee9b488f603554652f5c5,
     type: 3}
   m_PrefabInternal: {fileID: 1698581617}
+--- !u!114 &1698581626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1698581619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277d9bfdf772c4f4e8cfe82339616ad4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1700860164
 GameObject:
   m_ObjectHideFlags: 0
@@ -57256,7 +57276,7 @@ GameObject:
   - component: {fileID: 1803120781}
   m_Layer: 0
   m_Name: Wall2
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 40
@@ -57284,8 +57304,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 13.52098, y: 1, z: 1}
+  m_Center: {x: -4.729009, y: 0, z: 3.835145e-16}
 --- !u!23 &1803120782
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -58159,7 +58179,7 @@ GameObject:
   - component: {fileID: 1876274806}
   m_Layer: 0
   m_Name: Wall2
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 40
@@ -58187,8 +58207,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 15.362424, y: 1, z: 1}
+  m_Center: {x: -3.6043026, y: 0, z: 7.642016e-17}
 --- !u!23 &1876274807
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -71001,7 +71021,7 @@ GameObject:
   - component: {fileID: 2145842736}
   m_Layer: 0
   m_Name: Wall1
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 40
@@ -71029,8 +71049,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 18.408648, y: 1, z: 0.99999857}
+  m_Center: {x: -4.668862, y: 0, z: 3.6709063e-16}
 --- !u!23 &2145842737
 MeshRenderer:
   m_ObjectHideFlags: 0

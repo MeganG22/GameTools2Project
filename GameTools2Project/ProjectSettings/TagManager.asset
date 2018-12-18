@@ -8,6 +8,7 @@ TagManager:
   - orb
   - portal
   - key
+  - wall
   layers:
   - Default
   - TransparentFX
