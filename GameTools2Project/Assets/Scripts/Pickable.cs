@@ -23,10 +23,10 @@ public class Pickable : MonoBehaviour {
     IEnumerator HandlePick(Transform newParent)
     {
         //Picking the Pillars at set times
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.4f);
         transform.localPosition = Vector3.zero;
 
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.6f);
         Destroy(gameObject);
     }
 

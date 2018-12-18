@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     private bool m_enableIK;
     private float m_weightIK;
     private Vector3 m_positionIK;
-    private bool m_picked;
+    private bool m_collect;
 
     //Animator
     private Animator m_animator;
@@ -36,10 +36,12 @@ public class Player : MonoBehaviour
         m_animator = GetComponent<Animator>();
     }
 
-    public void Move(float dodgeX, float walkY, float back, bool magic)
+    public void Move(float dodgeX, float walkY, float back, bool magic, bool collect)
     {
         m_animator.SetFloat("DodgeX", dodgeX);
         m_animator.SetFloat("WalkY", walkY);
+
+        m_collect = collect;
 
         if (magic)
         {
@@ -89,13 +91,13 @@ public class Player : MonoBehaviour
         {
             var pickable = other.GetComponent<Pickable>();
 
-            if (m_picked && pickable != null && !pickable.picked)
+            if (m_collect && pickable != null && !pickable.picked)
             {
                 // do something
                 Transform rightHand = m_animator.GetBoneTransform(HumanBodyBones.RightHand);
                 pickable.BePicked(rightHand);
 
-                m_animator.SetTrigger("Magic");
+                m_animator.SetTrigger("Pick");
                 StartCoroutine(UpdateIK(other));// Start corroutine to update position and weight
             }
         }

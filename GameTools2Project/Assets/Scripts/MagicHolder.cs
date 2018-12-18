@@ -7,7 +7,7 @@ public class MagicHolder : MonoBehaviour {
     [SerializeField] GameObject m_magicOrb;
     [SerializeField] Transform m_magicReference;
     [SerializeField] Player m_player;
-    private Animator m_animator;
+    //private Animator m_animator;
 
     //bool input = false;
 
@@ -29,7 +29,7 @@ public class MagicHolder : MonoBehaviour {
 
     private void Magic()
     {
-        m_animator = GetComponent<Animator>();
+        //m_animator = GetComponent<Animator>();
         bool input = Input.GetButtonDown("Jump");
         //lastSpell = Time.time;
         //_timer += Time.deltaTime;

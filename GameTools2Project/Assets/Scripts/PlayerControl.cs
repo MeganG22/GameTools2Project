@@ -28,7 +28,7 @@ public class PlayerControl : MonoBehaviour {
         m_back = Input.GetAxis("Vertical");
         m_collect = Input.GetButtonDown("Collect");
 
-        m_player.Move(m_dodgeX, m_walkY, m_back, m_magic);
+        m_player.Move(m_dodgeX, m_walkY, m_back, m_magic, m_collect);
     }
 
     private void OnTriggerStay(Collider other)
@@ -41,7 +41,7 @@ public class PlayerControl : MonoBehaviour {
             Transform rightHand = m_animator.GetBoneTransform(HumanBodyBones.RightHand);
             pickable.BePicked(rightHand);
 
-            m_animator.SetTrigger("Magic");
+            m_animator.SetTrigger("Pick");
         }
     }
 }
